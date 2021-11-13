@@ -1,0 +1,216 @@
+*
+{
+	margin:0px;
+	padding:0px;
+	background-color: black;
+}
+
+html
+{
+    width: 100%;
+    height: 100%;
+	min-height: 600px;
+	min-width: 600px;
+}
+
+body
+{
+    height: 100%;
+	min-width: 1040px;
+	text-align: center;
+	margin-right:10%;
+	margin-left: 10%;
+	padding:1%;
+	border-left: 3px solid aliceblue;
+	border-right: 3px solid aliceblue;
+	border-bottom: 3px solid aliceblue;
+}
+
+
+
+header
+{
+    width: 100%;
+    height: 100px;
+}
+			
+#logo
+{
+	height:90px;
+	width:500px;
+	margin-right:0px;
+	margin-top:0%;
+	border:0px;
+	border-radius:10px;
+	float:right;
+	position:relative;
+    box-shadow: 10px 10px 20px aliceblue;
+}
+
+
+			
+#breakLine
+{
+	margin-top:10px;
+	border-radius:5px;
+	height:7px;
+	width:inherit;
+	background-color:aliceblue;
+	
+	
+}
+
+
+
+#buttons a
+{
+	color: aliceblue;
+    text-decoration: none;
+    text-align: center;
+	float:left;
+	width:100px;
+	margin-right:20px;
+	margin-top:-10px;
+    display:block;
+    border-radius: 30px;
+    box-shadow: 5px -5px 20px aliceblue;  /*נותן אפקט תאורה */
+}
+
+#buttons a:hover
+{
+    background-color: aliceblue;
+    color:black;
+	border-radius: 30px;
+}
+
+#vid-conteaner
+{
+    z-index: -1;
+	background-color: black;
+	text-align: center;
+	height: 300px;
+    min-width: 100px;
+}
+
+#vid-conteaner #vid1
+{
+	margin-top: 2.5%;
+	border-radius: 800px;
+	width: 700px;
+}
+
+@keyframes sss
+{
+    0%, 50%{
+        background: url(video/2.mp4); 
+    }
+    50%,100%{
+        background-image:url(pics/H_14.jpg)
+    }
+}
+
+/*עיצוב תפריט*/
+/*===========================================================*/
+
+#navBar-menu 
+{
+	min-width: 600px;
+	margin-right:inherit;
+    height: 40px;
+    text-align: center;  
+}
+
+ul#navBar-menu, .sub1
+{
+	list-style-type:none;
+}
+
+ul#navBar-menu li
+{
+	width:200px;
+	height:30px;
+	position:relative;
+	float:right;
+	margin-right: ;
+    z-index: 10; 				                       /*גורם לקישורים להיות מעל הוידיו*/
+}
+
+
+ul#navBar-menu a 
+{
+	text-decoration:none;
+	color:navajowhite;                                    /*צבע כיתוב בתפריט*/
+	font-family:"roman new " ;
+	font-size:20px;
+	display:block;								           	/*נותן ככפתור */	
+	padding:3px;
+	background-color:black;
+	border:1px outset aliceblue;
+	border-radius:9px;
+	position:relative;
+	
+}
+
+ul#navBar-menu a:hover                          /*בזמן ריחוף על הלינקים התבעים יתחלפו*/
+{
+	background-color:navajowhite;           
+	color:black;
+}
+
+  .sub1
+{ 
+	display:none;                                     /*מסתיר את התת קטיגוריות*/
+}
+
+ li:hover .sub1                        /*בזמן ריחוף הבלוקים המוסתרים מתגלים*/
+{
+	display:block;
+	 opacity: 0.7;            		           		  /*רקע שקוף*/
+}
+
+#navBar-menu .sub1 li
+{
+	
+	position:relative;
+	height:45px;
+	width:200px;
+	
+	
+}
+
+nav{
+    padding:5px;
+    width:100%;
+    height: 40px;
+	min-width: 900px;
+	
+	
+}
+
+#navBar-menu .sub1 li a
+{
+    margin-top: 10px;                            /*הלינקים מהתפריט של המוצרים מושפעים*/
+    margin-left: 6px;
+	opacity: 1;
+}
+
+/*======================================================================================*/
+/*area for jquery*/
+
+#panel {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+    width: 70%;
+    opacity: 0.9;
+    
+}
+
+#panel {
+    float: right;
+    position: fixed;
+    padding: 50px;
+    display: none;
+    z-index: 100;
+}

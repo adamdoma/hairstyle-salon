@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+	<meta charset="UTF-8">
+	<title>Sing Up</title>
+	<style style="text/css">
+        
+		html{
+			width:100%;
+			height:100%;
+		}
+		body
+		{
+			margin:2%;
+		}
+		
+		header{
+			width:100%;
+			height:50px;
+			background-color:black;
+			color:white;
+			text-align:center;
+		}
+		footer
+		{
+			height:30px;
+			width:100%;
+			text-align:center;
+			color:white;
+			background-color:black;
+			margin-top:90%;
+			position:relative;
+		}
+		
+    
+        
+		table
+		{
+            margin-right: 15%;
+            
+			margin-top:30px;
+			width:70%;
+			padding-right:20px;
+			padding-left:20px;
+		}
+        
+ 
+		form table tr td 
+		{
+            text-align: center;
+		}
+        
+        form table tr td input
+        {
+            width: 400px;
+            height:30px
+        }
+        
+        form table tr td input:hover
+        {
+            background-color: wheat;
+        }
+        
+        #button 
+        {
+            background-color: #eaeaea;
+            width: 100%;
+            min-width: 600px;
+            height:50px;
+            text-align: center;
+            margin-top: 100px;
+        }
+        
+        #button button
+        {
+            margin: 13px;
+            
+        }
+		
+	</style>
+    
+    <script type="text/javascript">
+        
+	  function password()                                                                      /*בדיקת אימות סיסמא*/
+        {
+            var pass=document.getElementById('pass').value;                                      
+            var pass_c=document.getElementById('pass_c').value;
+            var y=new String();
+            
+            
+            for(var i=0; i<pass.length;i++)
+                {
+                    if(pass!=pass_c){
+                        y="Please type password again";
+                        window.alert(y);
+                       return false;
+                    }
+                    else{
+                        return (email_check());
+                        
+                    }
+                }
+			
+        }
+        
+        function email_check()
+        {
+            var email= document.getElementById('email').value;
+            var at=new Boolean(false);
+            var dot=new Boolean(false);
+            
+            for(var i=0;i<email.length;i++){
+                if(email.charAt(i)=="@"){
+                    at=true;
+                }
+                if(email.charAt(i)=="."){
+                    dot=true;
+                }
+            }
+            if(dot==true&&at==true){
+               
+				return true;
+            }else{
+                window.alert("check email again");
+				return false;
+            }
+            
+        }
+    
+    </script>
+</head>
+    
+<body>
+	<header>
+		<h1>אזור הרשמה</h1>
+	</header>
+	
+	<form action="aaa.php" method="post">
+		<table>
+			<tr>
+			<td><input type="text" name="name" placeholder="שם"></td>
+			<td><input type="text" name="last_name" placeholder="שם משפחה"></td>
+			</tr>
+			<tr>
+				<td><input type="email" placeholder="אימייל" id="email"></td>
+				<td><input type="email" placeholder="כתובת מגורים"></td>
+			</tr>
+            <tr>
+                <td><input type="password" placeholder="סיסמא" id="pass"></td>
+                <td><input type="password" placeholder="אימות סיסמא" id="pass_c"></td>
+
+            </tr>
+		</table>
+        <div id="button">
+            <button type="submit" name="submit" onclick="return password()">שלח</button>
+            <button type="reset" name="reset">נקה</button>
+        </div>
+	</form>
+	
+	<footer>כל הזכויות שמורות לאדם</footer>
+</body>
+</html>
+
+<!--placeholder השם של התיבה נעלם בזמן הקלדה על אותו תיבה-->

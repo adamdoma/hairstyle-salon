@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html dir="rtl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			@import url(index_css.css);
+		</style>
+		
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+           <script> 
+               $(document).ready(function(){
+                   
+                   $("#buttons").click(function(){
+                       $("#panel").slideToggle("fast");
+                       $("#panel").animate({fontSize: '5em'}, "slow");
+                       $("#panel").animate({fontSize: '25px'}, "slow");
+                   });
+               });
+           </script> 
+            
+        
+		
+	</head>
+	
+	<body>
+        <div id="dd">
+		
+		<header><img id="logo" src="pics/logo.jpg"></header>
+        <div id="buttons"><a  href="#">התחבר</a>
+                          <a href="singUp.html">הירשם</a>
+		</div>
+		<div id="breakLine"></div>
+        
+        <div id="panel">בשלב זה LOGIN עדיין אינו פעיל</div>
+		
+		<nav>
+			<ul id="navBar-menu">
+				<li><a href="index.html" target="_self" >ראשי</a></li>                   
+				<li><a href="makeup.html" target="_self">איפור</a></li>
+				<li><a href="hairStyle.html">עיצוב שיער</a></li>
+				<li><a href="#">מוצרים</a>
+					<ul class="sub1">
+						<li><a href="products.html">מוצרי טיפוח</a></li>
+						<li><a href="#">מוצרי איפור</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="about.html" target="_self">אודות</a></li>
+			</ul>
+            
+		</nav>
+		<div id="vid-conteaner">
+			<video id="vid1" src="video/2.0.mp4" autoplay muted loop> </video>
+        	
+        </div>
+        
+        
+       
+        
+    <!--====================================================================================================================================================-->
+        </div>
+        <div id="anima">fgdfg </div>
+	</body>
+</html>
